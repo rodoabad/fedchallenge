@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h1>UX Society Members</h1>
+        <input type="text" data-ng-model="filter.username" placeholder="Search" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <table role="grid" class="small-12 columns">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Occupation</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="member in members | filter: filter.username | orderBy: 'firstName'">
+                    <td><a href="#/members/{{ member.id }}">{{ member.firstName }} {{ member.middleInitial }}. {{ member.surname }}</a></td>
+                    <td>{{ member.occupation }}</td>
+                    <td>{{ member.company }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

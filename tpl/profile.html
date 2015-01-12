@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h1>{{ member.title }} {{ member.firstName }} {{ member.middleInitial }}. {{ member.surname }}</h1>
+        <p>{{ member.motto }}</p>
+        <img src="{{ member.portrait }}">
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-4 columns">
+            <h3>Address</h3>
+            Street: {{ member.streetAddress }}<br/>
+            City: {{ member.city }}<br/>
+            State: {{ member.state }}<br/>
+            Country: {{ member.country }}<br/>
+            Zip Code: {{ member.zipCode }}<br/>
+    </div>
+    <div class="small-4 columns">
+        <div>
+           <h3>Work</h3>
+           Occupation: {{ member.occupation }}<br/>
+           Company: {{ member.company }}
+        </div>
+    </div>
+    <div class="small-4 columns">
+        <h3>Misc</h3>
+        Gender: {{ member.gender }}<br/>
+        Birthday: {{ member.birthday }}<br/>
+        Email: {{ member.email }}
+    </div>
+</div>
